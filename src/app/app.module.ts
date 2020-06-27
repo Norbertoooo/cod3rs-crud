@@ -15,6 +15,20 @@ import {MatCardModule} from '@angular/material/card';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import {AppRoutingModule} from './app-routing.module';
 import { RedDirective } from './directives/red.directive';
+import { ProductCreateComponent } from './component/product/product-create/product-create.component';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { ProductReadComponent } from './component/product/product-read/product-read.component';
+import {MatTableModule} from '@angular/material/table';
+import { ProductReadSchematicsComponent } from './component/product/product-read-schematics/product-read-schematics.component';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
+import { ProductUpdateComponent } from './component/product/product-update/product-update.component';
+import { ProductDeleteComponent } from './component/product/product-delete/product-delete.component';
 
 @NgModule({
   declarations: [
@@ -24,18 +38,32 @@ import { RedDirective } from './directives/red.directive';
     NavComponent,
     HomeComponent,
     ProductCrudComponent,
-    RedDirective
+    RedDirective,
+    ProductCreateComponent,
+    ProductReadComponent,
+    ProductReadSchematicsComponent,
+    ProductUpdateComponent,
+    ProductDeleteComponent
   ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    RouterModule,
-    MatSidenavModule,
-    MatListModule,
-    MatCardModule,
-    AppRoutingModule
-  ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        RouterModule,
+        MatSidenavModule,
+        MatListModule,
+        MatCardModule,
+        MatButtonModule,
+        MatSnackBarModule,
+        AppRoutingModule,
+        MatFormFieldModule,
+        FormsModule,
+        MatInputModule,
+        HttpClientModule,
+        MatTableModule,
+        MatPaginatorModule,
+        MatSortModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

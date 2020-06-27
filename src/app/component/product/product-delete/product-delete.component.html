@@ -1,0 +1,17 @@
+<mat-card xmlns="http://www.w3.org/1999/html">
+  <mat-card-title>Deletar Produto</mat-card-title>
+  <form>
+    <mat-form-field>
+      <input matInput [value]="product.name" disabled placeholder="Nome" name="name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput [value]="product.price" disabled placeholder="Preço (R$)" name="price">
+    </mat-form-field>
+  </form>
+  <button mat-raised-button color="warn" (click)="deletarProduto()">
+    Deletar
+  </button>
+  <button mat-raised-button color="accent" (click)="cancel()">
+    Cancelar
+  </button>
+</mat-card>
